@@ -4,13 +4,13 @@
 
 ## Dataset Options
 
-	# data salaryemp (keep=salary rename=salary=salaryemp); 
-	# infile '/home/u1421477/salary (2).txt';
-	# input year salary;
-	# run;
+	data salaryemp (keep=salary rename=salary=salaryemp); 
+	infile '/home/u1421477/salary (2).txt';
+	input year salary;
+	run;
 
-	# proc print data=salaryemp(firstobs=3 obs=4);
-	# run;
+	proc print data=salaryemp(firstobs=3 obs=4);
+	run;
 
 ## Delimiters
 
@@ -18,10 +18,10 @@
 
 	/* in this example, assume delimiter is a period . */
 
-	# data salary;
-	# infile '/home/u1421477/salary (2).txt' DLM=".";
-	# input year salary;
-	# run;
+	data salary;
+	infile '/home/u1421477/salary (2).txt' DLM=".";
+	input year salary;
+	run;
 
 ## Instream
 
@@ -73,114 +73,114 @@
 
 ## Create New Variables
 
-	# data houseprice;
-	# infile '/home/u1421477/houseprice (2).txt';
-	# input Type$ Price TaxPercent;
-	# TaxValue= Round (Price * TaxPercent);
-	# run;
+	data houseprice;
+	infile '/home/u1421477/houseprice (2).txt';
+	input Type$ Price TaxPercent;
+	TaxValue= Round (Price * TaxPercent);
+	run;
 
-	# /* using instream to create  new variable*/
-	# data houseprice1;
-	# input Type$ Price TaxPercent;
-	# TaxValue= Round (Price * TaxPercent);
-	# DATALINES;
-	# Single 300000 0.20
-	# Single 250000 0.25
-	# Duplex 175000 0.15
-	# run;
+	/* using instream to create  new variable*/
+	data houseprice1;
+	input Type$ Price TaxPercent;
+	TaxValue= Round (Price * TaxPercent);
+	DATALINES;
+	Single 300000 0.20
+	Single 250000 0.25
+	Duplex 175000 0.15
+	run;
 
 ## More With Creating Variables
 
-	# data sales;
-	# input Name$ Sales_1-Sales_4;
-	# Total = sum (of Sales_1-Sales_4);
-	# CARDS;
-	# Greg 10 2 40 0
-	# John 15 5 10 100
-	# Lisa 50 10 15 50
-	# Mark 20 0 5 20
-	# ;
-	# run;
+	data sales;
+	input Name$ Sales_1-Sales_4;
+	Total = sum (of Sales_1-Sales_4);
+	CARDS;
+	Greg 10 2 40 0
+	John 15 5 10 100
+	Lisa 50 10 15 50
+	Mark 20 0 5 20
+	;
+	run;
 
 ## Filtering Observations
 
-	# data filter;
+	data filter;
 	/* this might not work in the future as houseprice is a temp dataset*/
-	# SET houseprice;
-	# IF price<200000; 
-	# run;
+	SET houseprice;
+	IF price<200000; 
+	run;
 
 ## If Then Conditional Logic
 
-	# data sales;
-	# input Name$ Sales_1-Sales_4;
-	# Total = sum (of Sales_1-Sales_4);
-	# Fired = '';
-	# /* IF Then*/
-	# If Name='Greg' AND Total=>52 Then
-	# Do; 
-	# Fired='N';
-	# Total=Total+10;
-	# End;
-	# datalines;
-	# Greg 10 2 40 0
-	# John 15 5 10 100
-	# Lisa 50 10 15 50
-	# Mark 20 0 5 20
-	# ;
-	# run;
-
-	# proc print data=sales;
-	# run;
-
-
-	# data sales1;
-	# input Name$ Sales_1-Sales_4;
-	# Total = sum (of Sales_1-Sales_4);
-	# Fired = '';
-	# Performance='';
+	data sales;
+	input Name$ Sales_1-Sales_4;
+	Total = sum (of Sales_1-Sales_4);
+	Fired = '';
 	/* IF Then*/
-	# If Total=<10 Then Performance='l';
-	# else if Total=<50 then Performance='a';
-	# else Performance='h';
-	# datalines;
-	# Greg 10 2 40 0
-	# John 15 5 10 100
-	# Lisa 50 10 15 50
-	# Mark 20 0 5 20
-	# ;
-	# run;
+	If Name='Greg' AND Total=>52 Then
+	Do; 
+	Fired='N';
+	Total=Total+10;
+	End;
+	datalines;
+	Greg 10 2 40 0
+	John 15 5 10 100
+	Lisa 50 10 15 50
+	Mark 20 0 5 20
+	;
+	run;
 
-	# proc print data=sales1;
-	# run;
+	proc print data=sales;
+	run;
+
+
+	data sales1;
+	input Name$ Sales_1-Sales_4;
+	Total = sum (of Sales_1-Sales_4);
+	Fired = '';
+	Performance='';
+	/* IF Then*/
+	If Total=<10 Then Performance='l';
+	else if Total=<50 then Performance='a';
+	else Performance='h';
+	datalines;
+	Greg 10 2 40 0
+	John 15 5 10 100
+	Lisa 50 10 15 50
+	Mark 20 0 5 20
+	;
+	run;
+
+	proc print data=sales1;
+	run;
 
 ## Where Statements
 
-	# data sales;
-	# input Name$ Sales_1-Sales_4;
-	# Total = sum (of Sales_1-Sales_4);
-	# CARDS;
-	# Greg 10 2 40 0
-	# John 15 5 10 100
-	# Lisa 50 10 15 50
-	# Mark 20 0 5 20
-	# ;
-	# run;
+	data sales;
+	input Name$ Sales_1-Sales_4;
+	Total = sum (of Sales_1-Sales_4);
+	CARDS;
+	Greg 10 2 40 0
+	John 15 5 10 100
+	Lisa 50 10 15 50
+	Mark 20 0 5 20
+	;
+	run;
 
 
 	/* where from sql*/
-	# proc sql;
-	# Select Total from sales
-	# where Total > 50;
-	# run;
+	proc sql;
+	Select Total from sales
+	where Total > 50;
+	run;
 
 	/* where as dataset option*/
-	# proc print data=sales(where=(total>50));
-	# run;
+	proc print data=sales(where=(total>50));
+	run;
 
 	/* where included in data and proc steps*/
-	# proc print data=sales;
-	# where total>50;
-	# run;
+	proc print data=sales;
+	where total>50;
+	run;
 
 [Home Page](https://github.com/JoeWadford/SAS-Complete-Tutorial)
