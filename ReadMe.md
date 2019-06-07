@@ -12,7 +12,7 @@ Course Number | Course | Link to Repository
 5 |  Arrays |  [Section 5 Repository](https://github.com/JoeWadford/Data-Science-Coursera/tree/master/1_Data_Scientist_Toolbox)
 4 |  Input Types and Informats |  [Section 4 Repository](https://github.com/JoeWadford/Data-Science-Coursera/tree/master/3_Getting_and_Cleaning_Data)
 3 |  Working with Data |  [Section 3 Repository](https://github.com/JoeWadford/Data-Science-Coursera/tree/master/2_R_Programming)
-2 |  Importing Data |  [Section 2 Repository](https://github.com/JoeWadford/Data-Science-Coursera/tree/master/1_Data_Scientist_Toolbox) 
+2 |  Importing Data |  [Section 2 Repository](https://github.com/JoeWadford/SAS-Complete-Tutorial/tree/master/Importing%20Data) 
 
 ## Contact Info
 LinkedIn | Email | Tableau
