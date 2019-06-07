@@ -31,7 +31,7 @@
 	var var_1-var_6;
 	run;
 
-	/* more easier ways with Arrays */
+# more easier ways with Arrays
 
 	data sixvar;
 	infile '/home/u1421477/6var (2).txt';
