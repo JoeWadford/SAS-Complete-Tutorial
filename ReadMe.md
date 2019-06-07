@@ -7,7 +7,7 @@ Starting Section 8.  Visual Representation of Data
 Course Number | Course | Link to Repository
 --- | --- | ---
 8 |  Visual Representation of Data |  [Section 8 Repository](https://github.com/JoeWadford/Data-Science-Coursera/tree/master/2_R_Programming)
-7 |  Assignments |  [Section 7 Repository](https://github.com/JoeWadford/Data-Science-Coursera/tree/master/3_Getting_and_Cleaning_Data)
+7 |  Assignments |  [Section 7 Repository](https://github.com/JoeWadford/SAS-Complete-Tutorial/tree/master/Assignments)
 6 |  SAS Functions |  [Section 6 Repository](https://github.com/JoeWadford/SAS-Complete-Tutorial/tree/master/SAS%20Functions)
 5 |  Arrays |  [Section 5 Repository](https://github.com/JoeWadford/SAS-Complete-Tutorial/tree/master/Arrays)
 4 |  Input Types and Informats |  [Section 4 Repository](https://github.com/JoeWadford/SAS-Complete-Tutorial/tree/master/Input%20Types%20and%20Informats)
