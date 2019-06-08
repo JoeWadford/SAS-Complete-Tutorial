@@ -3,7 +3,7 @@ Author: Joe Wadford <br />
 
 Starting Section 8.  Visual Representation of Data 
 
-Section Number | Course | Link to Repository
+Section Number | Section| Link to Repository
 --- | --- | ---
 8 |  Visual Representation of Data |  [Section 8 Repository](https://github.com/JoeWadford/Data-Science-Coursera/tree/master/2_R_Programming)
 7 |  Assignments |  [Section 7 Repository](https://github.com/JoeWadford/SAS-Complete-Tutorial/tree/master/Assignments)
