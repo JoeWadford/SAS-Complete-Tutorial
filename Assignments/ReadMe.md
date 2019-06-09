@@ -35,9 +35,9 @@
 
 	data assignment2solution;
 	infile '/home/u1421477/Current_Employee_Names__Salaries__and_Position_Titles (2).csv' DSD MISSOVER Firstobs=2;
-	length Name$30 JobTitles$40 Dep$20 FULLorPART$8 SALorHR$8 TypicalH 8 AnnualS$ 11 HourlyR$ 8;
+	length Name$35 JobTitles$60 Dep$20 FULLorPART$14 SALorHR$10 TypicalH 3 AnnualS$ 20 HourlyR$ 25;
 	input Name$ JobTitles$ Dep$ FULLorPART$ SALorHR$ TypicalH AnnualS$ HourlyR$;
-	annualSAL = input(compress(annuals,'$'), comma9.);
+	annualSAL = input(compress(annuals,'$'), comma11.);
 	hourlyRate = input(compress(hourlyr,'$'), comma9.);
 
 	SALorHourly = coalesce(annualSAL,hourlyRate);
@@ -46,7 +46,8 @@
 	proc contents data=assignment2solution; run;
 
 	proc print data=assignment2solution(where=(hourlyRate > 50));
-	var Name HourlyR;
+	var Name hourlyRate;
+	format hourlyRate dollar11.2;
 	run;
 
 [Home Page](https://github.com/JoeWadford/SAS-Complete-Tutorial)
