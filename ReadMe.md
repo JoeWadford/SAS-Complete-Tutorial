@@ -1,11 +1,13 @@
 # SAS Complete Tutorial | Udemy
 Author: Joe Wadford <br />
 
-Starting Section 8.  Visual Representation of Data 
+Starting Section 10 with a little review of statistics from Section 9.  Stastical Analysis
 
 Section Number | Section| Link to Repository
 --- | --- | ---
-8 |  Visual Representation of Data |  [Section 8 Repository](https://github.com/JoeWadford/Data-Science-Coursera/tree/master/2_R_Programming)
+10|  Regression Analysis| [Section 10]()
+9 |  Stastical Analysis | [Section 9]()
+8 |  Visual Representation of Data |  [Section 8 Repository](https://github.com/JoeWadford/SAS-Complete-Tutorial/tree/master/Visual%20Representation%20of%20Data)
 7 |  Assignments |  [Section 7 Repository](https://github.com/JoeWadford/SAS-Complete-Tutorial/tree/master/Assignments)
 6 |  SAS Functions |  [Section 6 Repository](https://github.com/JoeWadford/SAS-Complete-Tutorial/tree/master/SAS%20Functions)
 5 |  Arrays |  [Section 5 Repository](https://github.com/JoeWadford/SAS-Complete-Tutorial/tree/master/Arrays)
